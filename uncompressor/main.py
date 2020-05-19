@@ -2,16 +2,25 @@
 # -*- coding: utf-8 -*-
 
 import click
+import tarfile
+import zipfile
+from . import Compressed
 
 
 @click.command()
-@click.argument('name')
-def command(name):
-    click.echo("hogehoge:{}".format(name))
+@click.argument('srcs', type=click.Path(exists=True), nargs=-1)
+@click.option('--dist', '-d', default='')
+def uncmpls(srcs, dist):
+    for src in srcs:
+        file = Compressed.Compressed(src)
+        if file.is_available():
+            print('available: ', end='')
+        print('src:' + src)
+    print('dist:' + dist)
 
 
 def main():
-    command()
+    uncmpls()
 
 
 if __name__ == '__main__':
