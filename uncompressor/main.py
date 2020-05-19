@@ -9,8 +9,8 @@ from . import Compressed
 
 @click.command()
 @click.argument('srcs', type=click.Path(exists=True), nargs=-1)
-@click.option('--dist', '-d', default='')
-def uncmpls(srcs, dist):
+@click.option('--dist', '-d', default='', help='An optional directory to which extract files.')
+def uncmprs(srcs, dist):
     for src in srcs:
         file = Compressed.Compressed(src)
         if file.is_available():
@@ -20,7 +20,7 @@ def uncmpls(srcs, dist):
 
 
 def main():
-    uncmpls()
+    uncmprs()
 
 
 if __name__ == '__main__':

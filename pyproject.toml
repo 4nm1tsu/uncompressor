@@ -13,7 +13,7 @@ Click = "^7.1.2"
 pytest = "^5.2"
 
 [tool.poetry.scripts]
-uncmpls = "uncompressor.main:main"
+uncmprs = "uncompressor.main:main"
 
 [build-system]
 requires = ["poetry>=0.12"]
