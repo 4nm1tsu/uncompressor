@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "uncompressor"
+version = "0.1.0"
+description = "easy file uncompressor."
+license = "MIT"
+authors = ["Hibiki Okada <4617016@ed.tus.ac.jp>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Click = "^7.1.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
