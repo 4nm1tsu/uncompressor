@@ -22,6 +22,13 @@ pip install uncompressor
 ```
 
 # Usage
+```bash
+uncmprs [OPTIONS] [SRCS]...
+
+Options:
+  -d, --dist TEXT  An optional directory to which extract files.
+  --help           Show message and exit.
+```
 
 # Author
 * Okada Hibiki
