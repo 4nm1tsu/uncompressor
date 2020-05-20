@@ -6,6 +6,12 @@ Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
 <p align="center"><img src="https://user-images.githubusercontent.com/40907120/82409543-fd1de700-9aa8-11ea-8459-aa2f2ad50901.gif"></p>
 
 # Features
+The following is current available file extension.
+* .zip
+* .tar
+* .tar.gz(.tgz)
+* .tar.bz2
+* .tar.xz(.txz)
 
 # Requirement
 * Python3.8.2
