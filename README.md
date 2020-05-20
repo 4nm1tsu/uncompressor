@@ -18,6 +18,7 @@ The following is current available file extension.
 
 # Installation
 ```bash
+pip install uncompressor
 ```
 
 # Usage
