@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import click
-import tarfile
-import zipfile
 from . import compressed
 from . import uncompress
 
@@ -14,11 +12,14 @@ from . import uncompress
 def uncmprs(srcs, dist):
     if dist:
         compressed.Compressed.set_dist(dist)
-    for src in srcs:
-        file = compressed.Compressed(src)
-        if file.is_available():
-            # 解凍処理
-            uncompress.uncompress(file)
+    with click.progressbar(srcs) as bar:
+        for src in bar:
+            file = compressed.Compressed(src)
+            if file.is_available():
+                # 解凍処理
+                uncompress.uncompress(file)
+            else:
+                click.secho('{file} is not a valid type'.format(file=file.path), fg='red')
 
 
 def main():
