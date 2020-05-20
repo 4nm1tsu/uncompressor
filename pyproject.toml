@@ -4,6 +4,8 @@ version = "0.1.0"
 description = "easy file uncompressor."
 license = "MIT"
 authors = ["Hibiki Okada <4617016@ed.tus.ac.jp>"]
+readme = "README.rst"
+repository = "https://github.com/dhaiibfiukkiu/uncompressor"
 
 [tool.poetry.dependencies]
 python = "^3.8"
