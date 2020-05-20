@@ -11,7 +11,7 @@ from . import uncompress
 @click.option('--dist', '-d', default='', help='An optional directory to which extract files.')
 def uncmprs(srcs, dist):
     if dist:
-        compressed.Compressed.set_dist(dist)
+        compressed.Compressed.dist = dist
     with click.progressbar(srcs) as bar:
         for src in bar:
             file = compressed.Compressed(src)

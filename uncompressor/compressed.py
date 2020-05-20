@@ -25,6 +25,3 @@ class Compressed():
             ext = mimetypes.guess_extension(self.type)
             return ext
         return ''
-
-    def set_dist(self, dist: str):
-        self.dist = dist
